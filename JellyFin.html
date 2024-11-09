@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>RPM Engineering</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Riley Magrini Portfolio</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="experience.html">Experience</a></li>
+								<li><a href="projects.html">Projects</a></li>
+								<li><a href="abme.html">About Me</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Home Media Server</h2>
+								<p></p>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<section>
+										<h3 class="major">What's a home media server?</h3>
+										<h4>And why would somebody want one?</h4>
+										<p>A home media server is a centralized storage solution that allows you to store, organize, and stream digital media files such as movies, music, and photos. By setting up a media server, you can access your content from any device on your home network and, with the right configuration, even stream media remotely. Popular options like <em>Jellyfin</em>, <em>Plex</em>, and <em>Emby</em> provide user-friendly interfaces and various features to enhance your home entertainment experience.<br>
+										While Plex and Emby have many pros associated with them, I chose to use Jellyfin for my setup. The reason was pretty simple: It's free and open source!</p>
+
+									</section>
+
+									<section>
+										<h3 class="major">How the server came to be</h3>
+										<h4></h4>
+										<p>My old roommate and I sourced an office computer off eBay, each chipping in just $10. After some setup, we installed <em>Proxmox</em> to run containers, turning it into a versatile home server. Now, it's our go-to hub, hosting Minecraft and Terraria servers, plus <em>Jellyfin</em> for streaming media. It’s been a great way to repurpose old hardware and get more value from a budget-friendly setup!</p>
+
+									</section>
+									<section>
+										<h3 class="major">How does Jellyfin work?</h3>
+										<h4>Is there a super long cord running from your daily driver PC to the box sitting on the floor of the living room?</h4>
+										<p><span class="image left"><img src="images/Projects/JellyFin/Samba_Files.jpg" alt="Screenshot of Network Drives viewed from Windows Machine" style="width: 75%; max-width: 300px; height: auto;" />Samba Network Drives "tv shows" and "movies"</span>
+											Thank goodness no. There is a super cool file sharing system that allows for the creation of a network drive on a linux machine that can be accessed by windows devices called <em>samba</em>.
+											This way, I can rip movie files from DVDs I own using my normal windows computer and upload the files to the linux computer running the Jellyfin server. Once the files are on the Linux machine Jellyfin is able to process the video file and pull important metadata from the internet. This includes title cards, subtitles, and cast info.</p>
+										<pre>
+
+
+
+
+
+
+
+										</pre>
+									</section>
+									<section>
+										<h3 class="major">How much media can you store?</h3>
+										<p>
+											<span class="image left"><img src="images/Projects/JellyFin/LVM.jpg" alt="Dynamically Allocated Drives"/>Dynamically allocated drive space</span>
+											The server came with 250Gb of storage on a hard drive. The speed of the hard drive isn't a huge issue (typically hard drives are MUCH slower than ssd storage), however, the capacity is. 
+											I didn't want to spend a lot of money on new storage devices, so I bought a super cheap 2Tb hard drive online and also looted my little sister's old laptop and stole her old 500Gb hard drive.
+											With all of these drives, the system now has an ultimate capacity of 2.75Tb, which is enough to get a solid collection uploaded to the server for everyone to enjoy. 
+											Now that I've added all the drives to the computer I'll be able to upload to my heart's content, right? <br>
+											Almost. <br>
+											Before I can upload media to these drives, I have to ensure that the OS can locate and communicate with these drives. Additionally, I am storing all the content in two files on one container,
+											in order to make sure these files have access to all 3 drives, the storage has to be configured on the OS side. To do this, I created volumes that the container sees as a local drive. 
+											I also configured the volumes to dynamically expand as they fill up, that way different containers (like the one running a minecraft server) 
+											can access different volumes and the storage on the drive will be dynamically allocated whenever more space is needed. 
+											Finally I can upload every video file I've ever had to the system and stream 24/7 with insanely small latency and extremely high quality.
+										</p>
+									</section>
+									<section>
+										<div class="row gtr-uniform">
+											<div class="col-4"><span class="image fit"><img src="images/Projects/JellyFin/Jelly_Movies.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/Projects/JellyFin/Jelly_TV.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/Projects/JellyFin/Jelly_Users.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/Projects/JellyFin/Screenshot 2024-09-03 104939.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/Projects/JellyFin/Screenshot 2024-09-03 105015.jpg" alt="" /></span></div>
+										</div>
+									</section>
+								</div>
+								
+							</div>
+
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+							<ul class="contact">
+								<li class="icon solid fa-home">
+									Untitled Inc<br />
+									1234 Somewhere Road Suite #2894<br />
+									Nashville, TN 00000-0000
+								</li>
+								<li class="icon solid fa-phone">(000) 000-0000</li>
+								<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
+								<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
+								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
+								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>RPM Engineering</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Riley Magrini Portfolio</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="experience.html">Experience</a></li>
+								<li><a href="projects.html">Projects</a></li>
+								<li><a href="abme.html">About Me</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Network-Wide Ad Blocking [Pi-Hole]</h2>
+								<p></p>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+									<section>
+										<h3 class="major">What's A Pi-Hole?</h3>
+										<h4>Can I eat one?</h4>
+										<p>Sadly, Pi-Holes aren't edible confections. That doesn't mean that they aren't sweet though! One summer I was getting more and more fed up with all of the ads that I was seeing day after day everywhere I looked. While I do understand that ads are a service that allow for many free online services, many ad companies use extremely invasive tactics to target people with not only ads but also specific online media. Eventually enough was enough, and I bought 2 raspberry-pis with the intent to set them up as house-wide ad blockers.
+											<br>A Pi-Hole is basically a custom DNS server. 
+										</p>
+										<h4>What's a DNS?</h4>
+										<p><span class="image left"><img src="images/Projects/Pi-Hole/DNS.png" alt="DNS Server Graphic" />DNS Server Graphic</span>DNS stands for "Domain Name Service". When someone tries to look up information online, they will usually type words in to a search bar [i.e. "Foobar"]. The DNS server takes the human-readable input and converts it into a machine-readable IP address. Once the device has the address, it can ask the web server for the information stored at that IP address.<pre>
+											
+										</pre></p>
+										<h4>So why do I need a custom DNS server?</h4>
+										<p>By setting up a custom DNS server, you gain the ability to blacklist or block specific IP addresses. This is useful because many websites don't actually host their own ads. Instead, many ads are stored on large physical servers. Thankfully, the task of figuring out what the IP addresses of those physical servers are isn't your job. There are many "blocklists" that are maintained by communities of people who hate ads and trackers enough to spend their free time hunting down and publishing these IP addresses. By taking advantage of these online blacklists, it's easier than ever to start blocking ads and trackers on your home network.</p>
+										<h4>That's cool! How does a raspberry pi become a DNS server?</h4>
+										<p><span class="image right"><img src="images/Projects/Pi-Hole/Pi_Hole_Role.png" alt="Graphic Depicting how a Pi-Hole operates" />Pi-Hole Overview</span>The raspberry pi is given a private IP address from the router. By making this a fixed address you can have other devices on that network use the rasperry pi's IP as a DNS server so that all the DNS queries will be sent to the raspberry pi. Once all the traffic is being routed through the raspbeery pi, it can start blocking requests that are blacklisted.<pre>
+
+
+
+										</pre></p>
+										<p><span class="image left"><img src="images/Projects/Pi-Hole/RPI.jpg" alt="Raspberry Pi Plugged In" />Raspberry Pi Plugged In</span><span class="image right"><img src="images/Projects/Pi-Hole/IMG_2617.jpg" alt="Pi-Hole WebUI" />Pi-Hole WebUI</span><pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</pre></p>
+
+									</section>
+
+								</div>
+								
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
